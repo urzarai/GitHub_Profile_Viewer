@@ -32,14 +32,14 @@ function displayProfile(profileData) {
     
     profileElement.innerHTML = `
         <h2>${profileData.login || 'N/A'}</h2>
-        <img src="${profileData.avatar_url}" alt="Profile avatar" style="width:100px; height:100px; border-radius:50%;" />
-        <div><b>Bio:</b> ${profileData.bio || 'No bio available'}</div>
-        <div><b>Followers:</b> ${profileData.followers}</div>
-        <div><b>Following:</b> ${profileData.following}</div>
-        <div><b>Public Repositories:</b> ${profileData.public_repos}</div>
-        <div><b>Location:</b> ${profileData.location || 'Not specified'}</div>
-        <div><b>Twitter:</b> ${profileData.twitter_username || 'Not specified'}</div>
-        <div><b>Email Id:</b> ${profileData.email || 'Not specified'}</div>
+        <img src="${profileData.avatar_url}" alt="Profile avatar" style="width:100px; height:100px; border-radius:50%;" /><br>
+        <div><b>Bio:</b> ${profileData.bio || 'No bio available'}</div><br>
+        <div><b>Followers:</b> ${profileData.followers}</div><br>
+        <div><b>Following:</b> ${profileData.following}</div><br>
+        <div><b>Public Repositories:</b> ${profileData.public_repos}</div><br>
+        <div><b>Location:</b> ${profileData.location || 'Not specified'}</div><br>
+        <div><b>Twitter:</b> ${profileData.twitter_username || 'Not specified'}</div><br>
+        <div><b>Email Id:</b> ${profileData.email || 'Not specified'}</div><br>
         <a href="${profileData.html_url}">View Profile on GitHub</a>
     `;
     
