@@ -6,14 +6,52 @@
 }
 
 body {
-    background-color: #f6f8fa;
+    background-color: #91c1db;
     padding: 20px;
     min-height: 100vh;
 }
 
 .container {
     max-width: 700px;
+    min-height: 650px; /* min fixed height */
     margin: 0 auto;
+    background-color: #54a7e2;
+    border: 5px solid rgb(22, 98, 174);
+    border-radius: 5px;
+    padding: 20px;
+    height: auto; /* Allow container to grow */
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.search img {
+    width: 60px;
+    height: 60px;
+}
+
+.search h1 {
+    margin: 10px 0;
+    color: #24292f;
 }
 
 /* Header Styling */
@@ -35,16 +73,6 @@ h1 {
     color: #24292f;
 }
 
-/* Search Section */
-.search-container {
-    background: #f8fafc;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
 
 input {
     flex: 1;
@@ -61,7 +89,7 @@ input:focus {
 }
 
 button {
-    background: #2da44e;
+    background: #06778b;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -71,27 +99,35 @@ button {
 }
 
 button:hover {
-    background: #2c974b;
+    background: #02679e;
 }
 
 /* Profile Section */
-.profile-container {
-    background: #f8fafc;
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.profile-info {
+    text-align: left;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#profile img {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 
 .profile-container h2 {
     color: #24292f;
     margin-bottom: 15px;
-}
-
-.profile-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    text-align: left;
 }
 
 .profile-container div {
@@ -104,7 +140,6 @@ button:hover {
 }
 
 .profile-container a {
-    display: inline-block;
     margin-top: 15px;
     color: #0969da;
     text-decoration: none;
@@ -129,13 +164,30 @@ button:hover {
     color: #57606a;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
-    .search-container {
+    .search-input {
         flex-direction: column;
     }
 
-    input, button {
+    .container {
+        margin: 10px;
+        width: auto;
+    }
+
+    input, 
+    button {
         width: 100%;
     }
+
+    #profile div {
+        width: 100%;
+    }
+}
+
+input {
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
 }
